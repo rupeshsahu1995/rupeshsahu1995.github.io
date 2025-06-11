@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupesh Sahu - Professional Bio Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px; /* Reduced padding for overall space */
+            background-color: #eef2f6; /* Light blue-gray background */
+            color: #34495e; /* Darker text color */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top to allow scrolling if content is tall */
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+            max-width: 1050px;
+            width: 100%; /* Ensure it always takes full available width up to max-width */
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .sidebar {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: #ecf0f1;
+            padding: 30px;
+            flex: 1;
+            min-width: 280px; /* Minimum width for sidebar */
+            max-width: 350px; /* Maximum width for sidebar */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0; /* Prevent sidebar from shrinking too much */
+        }
+
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="rgba(255,255,255,0.05)" fill-opacity="0.7"><path d="M60 16v16h-16v-16h16zm-16-16v16h-16v-16h16zm-16 0v16h-16v-16h16zm-16 0v16H0V0h16zM60 32v16h-16v-16h16zM44 32v16h-16v-16h16zM28 32v16h-16v-16h16zM12 32v16H0v-16h12zM60 48v12h-16V48h16zM44 48v12h-16V48h16zM28 48v12h-16V48h16zM12 48v12H0V48h12z"/></g></svg>');
+            background-size: 30px 30px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        .sidebar > * {
+            position: relative;
+            z-index: 1;
+        }
+
+       .main-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.table-section {
+  margin-bottom: 40px;
+}
+
+.table-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #3498db;
+  border-left: 4px solid #3498db;
+  padding-left: 10px;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.details-table th, .details-table td {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.details-table th {
+  background-color: #f4f8fb;
+  color: #2c3e50;
+  width: 40%;
+  font-weight: 600;
+}
+
+.details-table tr:hover {
+  background-color: #f0f8ff;
+}
+
+@media (max-width: 600px) {
+  .details-table th, .details-table td {
+    display: block;
+    width: 100%;
+  }
+  .details-table th {
+    background: #ecf5fb;
+    border-bottom: none;
+  }
+  .details-table td {
+    padding-top: 0;
+  }
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.info-section {
+    margin-bottom: 40px;
+    background: #f4f9ff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    border-left: 6px solid #3498db;
+    transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+    transform: scale(1.02);
+}
+
+.info-section h2 {
+    font-size: 1.4rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+}
+
+.details-list li:last-child {
+    border-bottom: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3.2em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-bottom: 15px;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #3498db;
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 2em;
+            color: #3498db;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #d4e6f1;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .sidebar h2 {
+            color: #ecf0f1;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%; /* Ensure list takes full width in sidebar */
+        }
+
+        .details-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.6;
+            padding: 5px 0;
+            transition: background-color 0.3s ease;
+            flex-wrap: wrap; /* Allow items to wrap on small screens */
+        }
+
+        .details-list li:hover {
+            background-color: #f8fcfd;
+            border-radius: 4px;
+        }
+
+        .details-list strong {
+            color: #495057;
+            display: inline-block;
+            min-width: 160px;
+            font-weight: 600;
+            margin-right: 10px;
+            flex-shrink: 0; /* Prevent label from shrinking */
+        }
+        .sidebar .details-list strong {
+            color: #b7c0cc;
+        }
+
+        /* Profile Photo Styling */
+        .profile-photo-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #3498db;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            background-color: #e0e0e0; /* Placeholder background */
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, border-color 0.3s ease;
+        }
+
+        .profile-photo-container:hover {
+            transform: scale(1.05);
+            border-color: #5dade2;
+        }
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* IMPORTANT: Ensures the full image is visible, no cropping */
+            object-position: center;
+            display: block;
+            background-color: #ffffff; /* Fills empty space if object-fit: contain leaves gaps */
+        }
+
+        /* Social Media Icons Styling */
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-links li {
+            margin: 0;
+        }
+
+        .social-links a {
+            color: #ecf0f1;
+            font-size: 2.2em;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: #76d7c4;
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            body {
+                padding: 15px; /* Adjust body padding for smaller screens */
+            }
+            .container {
+                flex-direction: column; /* Stack sidebar and main content */
+                border-radius: 8px; /* Slightly less rounded on small screens */
+            }
+            .sidebar {
+                max-width: 100%;
+                min-width: unset; /* Remove min-width when stacking */
+                width: 100%; /* Take full width */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 25px; /* Adjust padding for stacked sidebar */
+            }
+        
+            h1 {
+                font-size: 2.5em;
+                margin-top: 20px;
+            }
+            h1::after {
+                width: 60px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .sidebar, .main-content {
+                padding: 20px; /* Further reduce padding for very small screens */
+            }
+            h1 {
+                font-size: 2em;
+                letter-spacing: 2px;
+            }
+            h2 {
+                font-size: 1.6em;
+                margin-top: 25px; /* Adjust spacing */
+            }
+            .profile-photo-container {
+                width: 140px;
+                height: 140px;
+                margin-bottom: 25px;
+            }
+            .details-list strong {
+                min-width: 100px; /* Reduce min-width for labels */
+                margin-right: 5px; /* Reduce space */
+            }
+            .details-list li {
+                font-size: 0.95em; /* Slightly smaller text */
+                margin-bottom: 8px;
+            }
+            .social-links {
+                gap: 18px;
+                margin-top: 20px;
+            }
+            .social-links a {
+                font-size: 1.8em;
+            }
+            .copy-button {
+                padding: 5px 10px;
+                font-size: 0.8em;
+                margin-left: 10px;
+            }
+        }
+
+        /* Lightbox Styling */
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        #lightbox img {
+            max-width: 90%; /* Ensure it fits on smaller screens */
+            max-height: 90%; /* Ensure it fits on smaller screens */
+            border: 8px solid #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transform: scale(0.8);
+            transition: transform 0.3s ease-out;
+            object-fit: contain; /* Ensure the full large photo is visible */
+            background-color: #000; /* Dark background for full photo */
+        }
+
+        #lightbox.active img {
+            transform: scale(1);
+        }
+
+        /* Copy Button Styling */
+        .copy-button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.88em;
+            margin-left: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .copy-button:hover {
+            background-color: #2ecc71;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        .copy-button:active {
+            background-color: #218838;
+            transform: translateY(0);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        /* --- CONTACT DETAILS ENHANCEMENTS --- */
+.contact-details-enhanced li {
+    align-items: center; /* Vertically align items in the middle */
+    margin-bottom: 15px; /* More space between contact items */
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.08); /* Very subtle background for sidebar contact list */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for each item */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.contact-details-enhanced li:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* More prominent shadow on hover */
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly brighter background on hover */
+}
+
+.contact-details-enhanced strong {
+    min-width: 90px; /* Adjust min-width for labels in contact section to make space for icon */
+    margin-right: 15px; /* More space between label and value */
+    color: #e0e0e0; /* Lighter color for label in sidebar */
+    font-weight: 700; /* Make label bolder */
+}
+
+.contact-link,
+.contact-address {
+    display: flex; /* Use flex for icon and text alignment */
+    align-items: center;
+    color: #ecf0f1; /* Text color for phone numbers and address */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #76d7c4; /* Hover color for phone links */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.contact-icon {
+    font-size: 1.1em; /* Slightly larger icon */
+    margin-right: 10px; /* Space between icon and text */
+    color: #76d7c4; /* Icon accent color */
+}
+
+/* Specific styling for the Address line to match overall look */
+.contact-details-enhanced li:last-child {
+    /* No specific changes needed here if the general li styling covers it */
+}
+
+/* Adjustments for mobile responsiveness within this section */
+@media (max-width: 600px) {
+    .contact-details-enhanced li {
+        padding: 8px 10px;
+        margin-bottom: 10px;
+    }
+    .contact-details-enhanced strong {
+        min-width: 80px; /* Further reduce label width on very small screens */
+        margin-right: 8px;
+    }
+    .contact-link,
+    .contact-address {
+        font-size: 0.9em;
+    }
+    .contact-icon {
+        font-size: 1em;
+        margin-right: 8px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-photo-container" onclick="openLightbox()">
+                <!-- IMPORTANT: Ensure 'mypic.jpg' is the correct path to your image file. -->
+                <!-- object-fit: contain ensures the entire image is visible, not cropped. If your photo isn't square, there might be white space to fill the circular container. -->
+                <img src="mypic.jpg" alt="Rupesh Sahu Profile Photo" class="profile-photo" />
+            </div>
+
+            <h2>CONTACT DETAILS</h2>
+<ul class="details-list contact-details-enhanced">
+    <li>
+        <strong>Phone 1:</strong>
+        <a href="tel:7509769044" class="contact-link">
+            <i class="fas fa-phone-alt contact-icon"></i> 7509769044
+        </a>
+    </li>
+    <li>
+        <strong>Phone 2:</strong>
+        <a href="tel:9329238252" class="contact-link">
+            <i class="fas fa-phone-alt contact-icon"></i> 9329238252
+        </a>
+    </li>
+    <li>
+        <strong>Address:</strong>
+        <span class="contact-address">
+            <i class="fas fa-map-marker-alt contact-icon"></i> Makronia Shankargarh, Rajakhedi, Sagar, Madhya Pradesh
+        </span>
+    </li>
+</ul>
+
+            <h2 style="margin-top: 40px;">SOCIAL PRESENCE</h2>
+            <ul class="social-links">
+                <!-- IMPORTANT: Replace '#' with your actual profile URLs -->
+                 <li><a href="https://www.facebook.com/rupesh.sahu.713395" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+
+                <li><a href="https://www.linkedin.com/in/rupeshsahu7509/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/rupeshsahu7509" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/0rupesh0" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <!-- Add more social media links as needed -->
+                <!-- Example for Facebook: <li><a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a></li> -->
+            </ul>
+        </div>
+
+        <div class="main-content">
+  <h1 class="section-title">💼 Rupesh Sahu Bio Data</h1>
+
+  <section class="table-section">
+    <h2>📋 Personal Details</h2>
+    <table class="details-table">
+      <tr><th>Date of Birth</th><td>20 November 1995</td></tr>
+      <tr><th>Time of Birth</th><td>9:30 PM</td></tr>
+      <tr><th>Place of Birth</th><td>Sagar, Madhya Pradesh</td></tr>
+      <tr><th>Rashi</th><td>Tula (Libra)</td></tr>
+      <tr><th>Nakshatra</th><td>Swati</td></tr>
+      <tr><th>Height</th><td>5 feet 4 inches</td></tr>
+      <tr><th>Education</th><td>Bachelor’s of Engineering (Information Technology)</td></tr>
+      <tr><th>Religion/Caste</th><td>Hindu / Sahu</td></tr>
+      <tr><th>Job/Occupation</th><td>Senior SDET at OpenText</td></tr>
+      <tr><th>Annual Income</th><td>₹22 LPA</td></tr>
+    </table>
+  </section>
+
+  <section class="table-section">
+    <h2>🏠 Family Details</h2>
+    <table class="details-table">
+      <tr><th>Father’s Name</th><td>C.L. Sahu</td></tr>
+      <tr><th>Father’s Occupation</th><td>Retired Ameen, Irrigation Department</td></tr>
+      <tr><th>Mother’s Name</th><td>Ramrati Sahu</td></tr>
+      <tr><th>Mother’s Occupation</th><td>Housewife</td></tr>
+      <tr><th>Brother’s Name (Elder)</th><td>Bhupendra Sahu</td></tr>
+      <tr><th>Brother’s Occupation</th><td>Owns a Hardware Shop</td></tr>
+      <tr><th>Sister-in-law</th><td>Shivangi Sahu</td></tr>
+      <tr><th>Sister-in-law’s Occupation</th><td>Teacher</td></tr>
+      <tr><th>Nephew</th><td>Divyam Sahu (1 year old)</td></tr>
+    </table>
+  </section>
+</div>
+
+
+    </div>
+
+    <!-- Lightbox Modal (outside container for full screen) -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="mypic.jpg" alt="Full Photo" />
+    </div>
+
+    <script>
+        // Modified copyToClipboard to use data attributes for flexibility
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-copy-target');
+                const textToCopy = document.getElementById(targetId).innerText;
+                navigator.clipboard.writeText(textToCopy)
+                    .then(() => {
+                        const originalText = this.innerText;
+                        this.innerText = 'Copied!';
+                        this.style.backgroundColor = '#28a745'; // Green for success
+                        setTimeout(() => {
+                            this.innerText = originalText;
+                            this.style.backgroundColor = ''; // Reset background
+                        }, 1500); // Revert after 1.5 seconds
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy: ', err);
+                        // Using a simple alert as previously requested, consider a custom modal for better UX
+                        alert('Failed to copy text. Please try again.');
+                    });
+            });
+        });
+
+        // Lightbox functions
+        function openLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const profilePhoto = document.querySelector(".profile-photo");
+
+            // Ensure lightbox shows the same image. Use 'profilePhoto.currentSrc' for robustness.
+            lightboxImg.src = profilePhoto.currentSrc || profilePhoto.src;
+            lightbox.classList.add('active'); // Use class to trigger animations
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            lightbox.classList.remove('active'); // Remove class to trigger fade out
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
